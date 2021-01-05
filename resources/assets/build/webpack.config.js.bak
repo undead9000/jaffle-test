@@ -1,4 +1,4 @@
-//'use strict'; // eslint-disable-line
+'use strict'; // eslint-disable-line
 
 const webpack = require('webpack');
 const merge = require('webpack-merge');
@@ -177,10 +177,10 @@ let webpackConfig = {
         eslint: { failOnWarning: false, failOnError: true },
       },
     }),
-    /*new StyleLintPlugin({
+    new StyleLintPlugin({
       failOnError: !config.enabled.watcher,
       syntax: 'scss',
-    }),*/
+    }),
     new FriendlyErrorsWebpackPlugin(),
   ],
 };
