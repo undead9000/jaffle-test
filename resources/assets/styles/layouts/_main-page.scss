@@ -155,3 +155,51 @@
         }
     }
 }
+.main-banner {
+    height: 46.17vw;
+}
+.banner-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100%;
+    width: 100%;
+    &__welcome {
+        padding: 9px 21px 8px 20px;
+        margin: 0 0 20px;
+        font-size: 14px;
+        font-weight: 800;
+        background: #FFFFFF;
+        border-radius: 17.5px;
+        color: #FE2626;
+    }
+    &__title {
+        font-weight: bold;
+        font-size: 45px;
+        line-height: 53px;
+        color: #0D0B22;
+        margin: 0 0 15px;
+    }
+    &__subtitle {
+        font-size: 15px;
+        line-height: 27px;
+        color: #43596C;
+        letter-spacing: 0.47;
+        margin: 0 0 29px;
+    }
+    &__cta {
+        position: relative;
+        background: #FE2626;
+        width: 166px;
+        border-radius: 5px;
+        padding: 16px 25px;
+        &:hover {
+            text-decoration: none;
+        }
+        span {
+            color: #ffffff;
+            position: relative;
+        }
+    }
+}

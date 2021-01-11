@@ -5,6 +5,7 @@
     @php do_action('get_header') @endphp
     @include('partials.static-top-line')
     @include('partials.header')
+    @include('partials.banner')
     <div class="wrap container" role="document">
       <div class="content">
         <main class="main">
