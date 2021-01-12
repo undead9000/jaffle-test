@@ -90,6 +90,3 @@ Container::getInstance()
             'view' => require dirname(__DIR__).'/config/view.php',
         ]);
     }, true);
-
-remove_filter( 'the_content', 'wpautop' );
-remove_filter( 'the_excerpt', 'wpautop' );

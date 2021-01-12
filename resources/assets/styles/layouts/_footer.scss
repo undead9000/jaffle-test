@@ -1,0 +1,116 @@
+@mixin container {
+  width: 100%;
+  max-width: 1150px;
+  margin: 0 auto;
+}
+
+footer {
+  background-image: url("../images/footer__bg.jpg");
+  background-color: #0d0b22;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 124px 0 126px;
+}
+
+.content-info {
+  &__container {
+    @include container;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  h3 {
+    margin: 8px 0 25px;
+    color: #fff;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 16px;
+  }
+}
+
+.menu-footer-menu-container {
+  ul.menu {
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+
+    li.menu-item {
+      list-style: none;
+      margin: 0 0 20px;
+
+      &:last-child {
+        margin: 0;
+      }
+
+      a {
+        font-weight: normal;
+        font-size: 13px;
+        line-height: 14px;
+        color: rgba(255, 255, 255, 0.5);
+      }
+    }
+  }
+}
+
+.sub-footer {
+  background-color: #0d0b22;
+  padding: 29px 0 30px;
+
+  &__container {
+    @include container;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__socials {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+
+    ul {
+      li {
+        margin: 0 40px 0 0;
+
+        &:last-child {
+          margin: 0;
+        }
+      }
+    }
+  }
+
+  &__fb {
+    display: inline-block;
+    width: 9px;
+    height: 15px;
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='9' height='15' viewBox='0 0 9 15' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M2.63882 15L2.61818 8.18182H0V5.45455H2.61818V3.75C2.61818 1.2195 4.12254 0 6.28962 0C7.32768 0 8.21983 0.0805023 8.47983 0.116489V2.76101L6.97684 2.76172C5.79826 2.76172 5.57006 3.3451 5.57006 4.20117V5.45455H9L7.69091 8.18182H5.57006V15H2.63882Z' fill='white'/%3E%3C/svg%3E");
+  }
+
+  &__instagram {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='15' height='15' viewBox='0 0 15 15' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10.3125 0H4.6875C2.09906 0 0 2.09906 0 4.6875V10.3125C0 12.9009 2.09906 15 4.6875 15H10.3125C12.9009 15 15 12.9009 15 10.3125V4.6875C15 2.09906 12.9009 0 10.3125 0ZM13.5938 10.3125C13.5938 12.1219 12.1219 13.5938 10.3125 13.5938H4.6875C2.87812 13.5938 1.40625 12.1219 1.40625 10.3125V4.6875C1.40625 2.87812 2.87812 1.40625 4.6875 1.40625H10.3125C12.1219 1.40625 13.5938 2.87812 13.5938 4.6875V10.3125Z' fill='white'/%3E%3Cpath d='M7.5 3.90002C5.291 3.90002 3.5 5.69102 3.5 7.90002C3.5 10.109 5.291 11.9 7.5 11.9C9.709 11.9 11.5 10.109 11.5 7.90002C11.5 5.69102 9.709 3.90002 7.5 3.90002ZM7.5 10.3C6.17712 10.3 5.1 9.2229 5.1 7.90002C5.1 6.57618 6.17712 5.50002 7.5 5.50002C8.82288 5.50002 9.9 6.57618 9.9 7.90002C9.9 9.2229 8.82288 10.3 7.5 10.3Z' fill='white'/%3E%3Cpath d='M10.5 4.5C11.0523 4.5 11.5 4.05228 11.5 3.5C11.5 2.94772 11.0523 2.5 10.5 2.5C9.94772 2.5 9.5 2.94772 9.5 3.5C9.5 4.05228 9.94772 4.5 10.5 4.5Z' fill='white'/%3E%3C/svg%3E");
+  }
+
+  &__twitter {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='16' height='13' viewBox='0 0 16 13' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M16 1.54124C15.4 1.80928 14.8 2.01031 14.1333 2.07732C14.8 1.67526 15.3333 1.00515 15.6 0.268041C14.9333 0.670103 14.2667 0.938144 13.5333 1.07216C12.9333 0.402062 12.0667 0 11.1333 0C9.33333 0 7.86667 1.47423 7.86667 3.28351C7.86667 3.55155 7.86667 3.81959 7.93333 4.02062C5.13333 3.8866 2.73333 2.54639 1.13333 0.536082C0.8 1.07216 0.666667 1.60825 0.666667 2.21134C0.666667 3.35052 1.26667 4.35567 2.13333 4.95876C1.6 4.95876 1.06667 4.82474 0.666667 4.5567C0.666667 4.5567 0.666667 4.5567 0.666667 4.62371C0.666667 6.23196 1.8 7.57217 3.26667 7.84021C3 7.90722 2.73333 7.97423 2.4 7.97423C2.2 7.97423 2 7.97423 1.8 7.90722C2.2 9.24742 3.4 10.1856 4.86667 10.1856C3.73333 11.0567 2.33333 11.5928 0.8 11.5928C0.533333 11.5928 0.266667 11.5928 0 11.5258C1.46667 12.4639 3.2 13 5 13C11.0667 13 14.3333 7.97423 14.3333 3.61856C14.3333 3.48454 14.3333 3.35052 14.3333 3.21649C15 2.74742 15.5333 2.14433 16 1.54124Z' fill='white'/%3E%3C/svg%3E");
+    display: inline-block;
+    width: 16px;
+    height: 13px;
+  }
+
+  &__copyright {
+    color: rgba(255, 255, 255, 0.5);
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 16px;
+  }
+}

@@ -1,5 +1,5 @@
 <div class="static-top-line">
-    <div class="container">
+    <div class="static-top-line__container">
         <div class="static-top-line__info static-top-line__info-place">Diaco’s Heatherton</div>
         <div class="static-top-line__info static-top-line__info-time">Today 8:00 AM - 12:00 PM</div>
         <select class="static-top-line__select" disabled>

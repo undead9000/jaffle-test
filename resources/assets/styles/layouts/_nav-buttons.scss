@@ -1,0 +1,67 @@
+.nav-buttons {
+  display: flex;
+  text-align: center;
+
+  &__icons {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+
+    a {
+      margin-right: 15px;
+      background-size: cover;
+
+      &:last-child {
+        margin: 0;
+      }
+    }
+  }
+
+  &__pin {
+    background: url("../images/navigation-buttons__pin.svg") no-repeat;
+    width: 11px;
+    height: 16px;
+  }
+
+  &__like {
+    background: url("../images/navigation-buttons__like.svg") no-repeat;
+    width: 14px;
+    height: 12px;
+  }
+
+  &__profile {
+    background: url("../images/navigation-buttons__profile.svg") no-repeat;
+    width: 11px;
+    height: 14px;
+  }
+
+  &__order {
+    background: #fe2626;
+    width: 113px;
+    border-radius: 5px;
+    padding: 11px 0;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  &__inner {
+    position: relative;
+    color: #fff;
+    padding: 0 0 0 23px;
+    font-weight: 600;
+    font-size: 14px;
+
+    &::before {
+      background-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='13' height='15' viewBox='0 0 13 15' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M9.625 5.125H12.25V12.5625C12.25 13.1641 12.0312 13.6836 11.5938 14.1211C11.1562 14.5586 10.6641 14.75 10.0625 14.75H2.1875C1.58594 14.75 1.06641 14.5586 0.628906 14.1211C0.191406 13.6836 0 13.1641 0 12.5625V5.125H2.625V4.25C2.625 3.62109 2.76172 3.04688 3.08984 2.5C3.39062 1.95312 3.80078 1.54297 4.34766 1.21484C4.89453 0.914062 5.46875 0.75 6.125 0.75C6.75391 0.75 7.32812 0.914062 7.875 1.21484C8.42188 1.54297 8.83203 1.95312 9.16016 2.5C9.46094 3.04688 9.625 3.62109 9.625 4.25V5.125ZM4.375 4.25V5.125H7.875V4.25C7.875 3.78516 7.68359 3.375 7.35547 3.01953C7 2.69141 6.58984 2.5 6.125 2.5C5.63281 2.5 5.22266 2.69141 4.89453 3.01953C4.53906 3.375 4.375 3.78516 4.375 4.25ZM8.75 7.53125C8.91406 7.53125 9.07812 7.47656 9.21484 7.33984C9.32422 7.23047 9.40625 7.06641 9.40625 6.875C9.40625 6.71094 9.32422 6.54688 9.21484 6.41016C9.07812 6.30078 8.91406 6.21875 8.75 6.21875C8.55859 6.21875 8.39453 6.30078 8.28516 6.41016C8.14844 6.54688 8.09375 6.71094 8.09375 6.875C8.09375 7.06641 8.14844 7.23047 8.28516 7.33984C8.39453 7.47656 8.55859 7.53125 8.75 7.53125ZM3.5 7.53125C3.66406 7.53125 3.82812 7.47656 3.96484 7.33984C4.07422 7.23047 4.15625 7.06641 4.15625 6.875C4.15625 6.71094 4.07422 6.54688 3.96484 6.41016C3.82812 6.30078 3.66406 6.21875 3.5 6.21875C3.30859 6.21875 3.14453 6.30078 3.03516 6.41016C2.89844 6.54688 2.84375 6.71094 2.84375 6.875C2.84375 7.06641 2.89844 7.23047 3.03516 7.33984C3.14453 7.47656 3.30859 7.53125 3.5 7.53125Z' fill='white'/%3E%3C/svg%3E");
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 50%;
+      margin-top: -6px;
+      width: 13px;
+      height: 12px;
+    }
+  }
+}

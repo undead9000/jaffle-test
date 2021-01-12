@@ -1,5 +1,5 @@
 <header class="navigation">
-  <div class="container">
+  <div class="navigation__container">
     <div class="navigation__menu">
         <nav class="nav-primary">
           @if (has_nav_menu('primary_navigation'))
@@ -13,14 +13,14 @@
     <div class="navigation__search">
         @include('partials.searchform')
     </div>
-    <div class="navigation-buttons">
-        <div class="navigation-buttons__icons">
-            <a class="navigation-buttons__pin" href="#"></a>
-            <a class="navigation-buttons__like" href="#"></a>
-            <a class="navigation-buttons__profile" href="#"></a>
+    <div class="nav-buttons">
+        <div class="nav-buttons__icons">
+            <a class="nav-buttons__pin" href="#"></a>
+            <a class="nav-buttons__like" href="#"></a>
+            <a class="nav-buttons__profile" href="#"></a>
         </div>
-        <a class="navigation-buttons__order" href="#">
-            <span class="navigation-buttons__inner">Order</span>
+        <a class="nav-buttons__order" href="#">
+            <span class="nav-buttons__inner">Order</span>
         </a>
     </div>    
   </div>
