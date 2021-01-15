@@ -1,3 +1,9 @@
+@mixin for-large {
+  @media screen and (min-width: 1200px) {
+    @content;
+  }
+}
+
 @mixin for-tablet {
   @media screen and (min-width: 480px) and (max-width: 768px) {
     @content;

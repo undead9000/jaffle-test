@@ -1,9 +1,16 @@
 .main-banner {
-  height: 46.17vw;
+  padding: 120px 0;
+
+  @include for-large {
+    max-height: 556px;
+  }
+
+  @include for-tablet {
+    padding: 75px 0;
+  }
 
   @include for-mobile {
-    height: auto;
-    padding: 37px 0 34px;
+    padding: 35px 0;
   }
 }
 
@@ -11,18 +18,13 @@
   &__container {
     @include container;
 
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    height: 100%;
-
     @include for-mobile {
-      align-items: center;
+      text-align: center;
     }
   }
 
   &__welcome {
+    display: inline-block;
     padding: 9px 20px;
     margin: 0 0 20px;
     font-size: 14px;
@@ -80,6 +82,7 @@
   }
 
   &__cta {
+    display: inline-block;
     position: relative;
     background: #fe2626;
     border-radius: 5px;
@@ -96,10 +99,10 @@
 
     @include for-tablet {
       font-size: 14px;
-      padding: 12px 30px 13px;
+      padding: 12px 30px;
     }
 
-    @include for-tablet {
+    @include for-mobile {
       width: 100%;
       max-width: 280px;
       text-align: center;

@@ -78,7 +78,7 @@
   }
 
   @include for-mobile {
-    padding: 14px 0 16px;
+    padding: 15px 0;
   }
 }
 
@@ -97,7 +97,8 @@
     }
 
     @include for-mobile {
-      padding: 20px 0;
+      max-width: unset;
+      padding: 20px;
       flex-wrap: wrap;
     }
   }
@@ -158,6 +159,8 @@
     }
 
     @include for-mobile {
+      max-width: 280px;
+      margin: 0 auto;
       width: 100%;
       display: block;
       order: 3;
@@ -172,7 +175,7 @@
     font-weight: 500;
     width: 418px;
     border: 1px solid #e7e7e9;
-    padding: 12px 20px 11px;
+    padding: 12px 20px;
     z-index: 0;
     border-radius: 5px;
 
