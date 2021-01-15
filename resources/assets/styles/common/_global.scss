@@ -5,8 +5,9 @@ body {
 
 @mixin container {
   width: 100%;
-  max-width: 1150px;
+  max-width: 1000px;
   margin: 0 auto;
+  padding: 0 20px;
 
   @include for-tablet {
     max-width: 688px;
