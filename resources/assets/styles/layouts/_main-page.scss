@@ -1,54 +1,89 @@
-@mixin container {
-  width: 100%;
-  max-width: 1150px;
-  margin: 0 auto;
-}
-
 .main-banner {
   height: 46.17vw;
+
+  @include for-mobile {
+    height: auto;
+    padding: 37px 0 34px;
+  }
 }
 
 .banner-info {
-  @include container;
+  &__container {
+    @include container;
 
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100%;
+
+    @include for-mobile {
+      align-items: center;
+    }
+  }
 
   &__welcome {
-    padding: 9px 21px 8px 20px;
+    padding: 9px 20px;
     margin: 0 0 20px;
     font-size: 14px;
     font-weight: 800;
     background: #fff;
     border-radius: 17.5px;
     color: #fe2626;
+    text-transform: uppercase;
+
+    @include for-tablet {
+      font-size: 13px;
+      margin: 0 0 15px;
+    }
   }
 
   &__title {
     font-weight: bold;
     font-size: 45px;
     line-height: 53px;
-    color: #0d0b22;
+    color: $primary-text-color;
     margin: 0 0 15px;
+
+    @include for-tablet {
+      font-size: 35px;
+      line-height: 43px;
+      margin: 0 0 15px;
+    }
+
+    @include for-mobile {
+      text-align: center;
+      font-size: 28px;
+      line-height: 40px;
+    }
   }
 
   &__subtitle {
     font-size: 15px;
     line-height: 27px;
     color: #43596c;
-    letter-spacing: 0.47;
+    letter-spacing: 0.47px;
     margin: 0 0 29px;
+    max-width: 400px;
+
+    @include for-tablet {
+      font-size: 14px;
+      line-height: 24px;
+      margin: 0 0 25px;
+    }
+
+    @include for-mobile {
+      text-align: center;
+      font-size: 14px;
+      line-height: 25px;
+    }
   }
 
   &__cta {
     position: relative;
     background: #fe2626;
-    width: 166px;
     border-radius: 5px;
-    padding: 16px 25px;
+    padding: 16px 28px;
 
     &:hover {
       text-decoration: none;
@@ -57,6 +92,17 @@
     span {
       color: #fff;
       position: relative;
+    }
+
+    @include for-tablet {
+      font-size: 14px;
+      padding: 12px 30px 13px;
+    }
+
+    @include for-tablet {
+      width: 100%;
+      max-width: 280px;
+      text-align: center;
     }
   }
 }

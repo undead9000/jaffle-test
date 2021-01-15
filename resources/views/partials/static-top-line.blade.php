@@ -8,5 +8,6 @@
             <option>Select Store 2</option>
             <option>Select Store 3</option>
         </select>
+        <a class="static-top-line__additional" href="#"></a>
     </div>
 </div>

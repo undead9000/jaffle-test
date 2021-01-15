@@ -1,4 +1,5 @@
 @import "common/variables";
+@import "common/media-query-mixins";
 
 /** Import everything from autoload */
 @import "./autoload/**/*";
@@ -14,6 +15,7 @@
 /** Import theme styles */
 @import "common/global";
 @import "common/fonts";
+@import "common/menu";
 @import "components/buttons";
 @import "components/comments";
 @import "components/forms";

@@ -1,16 +1,19 @@
-@mixin container {
-  width: 100%;
-  max-width: 1150px;
-  margin: 0 auto;
-}
-
 footer {
   background-image: url("../images/footer__bg.jpg");
-  background-color: #0d0b22;
+  background-color: $primary-text-color;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   background-repeat: no-repeat;
   background-size: cover;
   padding: 124px 0 126px;
+
+  @include for-tablet {
+    padding: 85px 0 105px;
+  }
+
+  @include for-mobile {
+    background-image: none;
+    padding: 35px 0 50px;
+  }
 }
 
 .content-info {
@@ -20,6 +23,33 @@ footer {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
+
+    @include for-tablet {
+      flex-wrap: wrap;
+    }
+
+    @include for-mobile {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  section {
+    &:first-child {
+      @include for-tablet {
+        width: 100%;
+        margin: 0 0 57px;
+      }
+
+      @include for-mobile {
+        margin: 0;
+      }
+    }
+
+    @include for-mobile {
+      margin: 60px 0 0 0;
+      text-align: center;
+    }
   }
 
   h3 {
@@ -28,6 +58,10 @@ footer {
     font-weight: bold;
     font-size: 16px;
     line-height: 16px;
+
+    @include for-tablet {
+      margin: 0 0 25px;
+    }
   }
 }
 
@@ -50,14 +84,18 @@ footer {
         font-size: 13px;
         line-height: 14px;
         color: rgba(255, 255, 255, 0.5);
+
+        @include for-tablet {
+          font-size: 12px;
+        }
       }
     }
   }
 }
 
 .sub-footer {
-  background-color: #0d0b22;
-  padding: 29px 0 30px;
+  background-color: $primary-text-color;
+  padding: 30px 0;
 
   &__container {
     @include container;
@@ -65,6 +103,10 @@ footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @include for-mobile {
+      flex-direction: column;
+    }
   }
 
   &__socials {
@@ -75,14 +117,16 @@ footer {
     align-items: center;
     list-style: none;
 
-    ul {
-      li {
-        margin: 0 40px 0 0;
+    li {
+      margin: 0 40px 0 0;
 
-        &:last-child {
-          margin: 0;
-        }
+      &:last-child {
+        margin: 0;
       }
+    }
+
+    @include for-mobile {
+      margin: 0 0 22px;
     }
   }
 
@@ -112,5 +156,15 @@ footer {
     font-weight: normal;
     font-size: 13px;
     line-height: 16px;
+
+    @include for-mobile {
+      max-width: 165px;
+      text-align: center;
+      line-height: 20px;
+    }
+  }
+
+  @include for-mobile {
+    padding: 36px 0;
   }
 }
