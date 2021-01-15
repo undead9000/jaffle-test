@@ -20,15 +20,16 @@ footer {
   &__container {
     @include container;
 
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(5, 120px);
     justify-content: space-between;
-    align-items: flex-start;
 
     @include for-tablet {
-      flex-wrap: wrap;
+      grid-template-columns: repeat(4, 110px);
     }
 
     @include for-mobile {
+      display: flex;
       flex-direction: column;
       align-items: center;
     }
@@ -37,6 +38,8 @@ footer {
   section {
     &:first-child {
       @include for-tablet {
+        grid-column-start: 1;
+        grid-column-end: 5;
         width: 100%;
         margin: 0 0 57px;
       }
