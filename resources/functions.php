@@ -90,3 +90,23 @@ Container::getInstance()
             'view' => require dirname(__DIR__).'/config/view.php',
         ]);
     }, true);
+
+add_action('acf/init', 'acf_main_page_banner');
+
+function acf_main_page_banner() {
+    
+    // check function exists
+    if( function_exists('acf_register_block') ) {
+        
+        // register a portfolio item block
+        acf_register_block(array(
+            'name'              => 'main-page-banner',
+            'title'             => __('Main Page banner'),
+            'description'       => __('A custom block for main page banner.'),
+            'render_template'   => 'views/acf_blocks/main-page-banner.php',
+            'category'          => 'layout',
+            'icon'              => 'excerpt-view',
+            'keywords'          => array( 'main-page' ),
+        ));
+    }
+}
