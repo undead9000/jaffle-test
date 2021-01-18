@@ -3,6 +3,7 @@
   @include('partials.head')
   <body @php body_class() @endphp>
     @php do_action('get_header') @endphp
+    @include('partials.menu')
     @include('partials.static-top-line')
     @include('partials.header')
       @yield('content')

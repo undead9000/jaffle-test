@@ -104,11 +104,6 @@
     }
   }
 
-  &__primary {
-    display: flex;
-    margin: 0 20px 0 0;
-  }
-
   &__menu {
     position: relative;
     display: flex;
@@ -120,8 +115,22 @@
   }
 
   &__toggle {
-    top: 0;
     position: relative;
+    display: block;
+    width: 18px;
+    margin: 0 20px 0 0;
+
+    div {
+      background: $primary-text-color;
+      width: 100%;
+      height: 2.5px;
+      margin: 0 0 3.5px;
+      border-radius: 1.25px;
+
+      &:last-child {
+        margin: 0;
+      }
+    }
   }
 
   &__logo {

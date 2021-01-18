@@ -22,3 +22,27 @@ const routes = new Router({
 
 // Load Events
 jQuery(document).ready(() => routes.loadEvents());
+
+$('.navigation__toggle').on('click', function(e){
+  e.preventDefault();
+  $('body').addClass('hidden');
+  $('.menu').addClass('show');
+});
+
+$('.menu__close, .overlay').on('click', function(e){
+  e.preventDefault();
+  $('body').removeClass('hidden');
+  $('.menu').removeClass('show');
+});
+
+$('.first-menu > li.menu-item-has-children > a').on('click', function(e){
+  e.preventDefault();
+  let submenu = $(this).next('.sub-menu');
+  if(submenu.hasClass('show')) {
+    $(this).removeClass('opened');
+    submenu.removeClass('show');
+  } else {
+    $(this).addClass('opened');
+    submenu.addClass('show');
+  }
+})
