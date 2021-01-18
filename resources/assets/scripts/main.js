@@ -22,20 +22,3 @@ const routes = new Router({
 
 // Load Events
 jQuery(document).ready(() => routes.loadEvents());
-
-$(document).on('click','.slicknav_btn',function(){
-  if($(this).hasClass('slicknav_open')) {
-    $('.slicknav-overlay').addClass('visible');
-    $('.slicknav-buttons').addClass('visible');
-  } else {
-    $('.slicknav-overlay').removeClass('visible');
-    $('.slicknav-buttons').removeClass('visible');
-  }
-});
-
-$(document).on('click','.slicknav-overlay.visible, .slicknav-close', function(e){
-  e.preventDefault();
-  $('#menu-main-menu-first').slicknav('close');
-  $('.slicknav-overlay').removeClass('visible');
-  $('.slicknav-buttons').removeClass('visible');
-});

@@ -1,13 +1,16 @@
 <header class="navigation">
   <div class="navigation__container">
     <div class="navigation__menu">
-        <nav class="navigation__primary">
-          @if (has_nav_menu('primary_navigation'))
-            {!! wp_nav_menu(['theme_location' => 'primary_navigation', 'menu_class' => 'nav']) !!}
-          @endif
-          @if (has_nav_menu('secondary_navigation'))
-            {!! wp_nav_menu(['theme_location' => 'secondary_navigation', 'menu_class' => 'nav']) !!}
-          @endif          
+        <a class="navigation__toggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </a>
+        <nav class="navigation__primary"> 
+          <ul class="navigation__wrapper">
+            <?php wp_nav_menu( array('menu' => 'main-menu-first', 'items_wrap' => '%3$s', 'container' => '%3$s' ) ); ?>
+            <?php wp_nav_menu( array('menu' => 'main-menu-second', 'items_wrap' => '%3$s', 'container' => '%3$s' ) ); ?>  
+          </ul>       
         </nav>       
         <a class="navigation__logo" href="{{ home_url('/') }}">
             <img src="<?= get_template_directory_uri(); ?>/assets/images/logo.svg" title="{{ get_bloginfo('name', 'display') }}">

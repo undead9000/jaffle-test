@@ -11,6 +11,9 @@
  * @see https://github.com/webpack-contrib/sass-loader#imports
  */
 // @import "~some-node-module";
+@import "~hc-offcanvas-nav/src/scss/core";
+@import "~hc-offcanvas-nav/src/scss/toggle";
+//@import "~hc-offcanvas-nav/src/scss/theme-default";
 
 /** Import theme styles */
 @import "common/global";

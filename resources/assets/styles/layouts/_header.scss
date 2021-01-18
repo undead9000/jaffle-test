@@ -109,12 +109,18 @@
   }
 
   &__menu {
+    position: relative;
     display: flex;
     align-items: center;
 
     @include for-mobile {
       order: 1;
     }
+  }
+
+  &__toggle {
+    top: 0;
+    position: relative;
   }
 
   &__logo {
@@ -125,6 +131,13 @@
         width: 78px;
       }
     }
+  }
+
+  &__img {
+    background: url("../images/logo.svg") no-repeat;
+    display: block;
+    width: 96px;
+    height: 30px;
   }
 
   &__search {

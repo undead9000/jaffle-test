@@ -6,7 +6,7 @@
     ],
     "customizer": [
       "./scripts/customizer.js"
-    ]
+    ]   
   },
   "publicPath": "/app/themes/sage-theme",
   "devUrl": "http://sage-theme.test",
