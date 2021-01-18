@@ -1,20 +1,6 @@
 .main-banner {
   padding: 120px 0;
 
-  @include for-large {
-    max-height: 556px;
-  }
-
-  @include for-tablet {
-    padding: 75px 0;
-  }
-
-  @include for-mobile {
-    padding: 35px 0;
-  }
-}
-
-.banner-info {
   &__container {
     @include container;
 
@@ -108,5 +94,17 @@
       max-width: 280px;
       text-align: center;
     }
+  }
+
+  @include for-large {
+    max-height: 556px;
+  }
+
+  @include for-tablet {
+    padding: 75px 0;
+  }
+
+  @include for-mobile {
+    padding: 35px 0;
   }
 }

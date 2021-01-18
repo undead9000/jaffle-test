@@ -16,7 +16,7 @@ footer {
   }
 }
 
-.content-info {
+.footer {
   &__container {
     @include container;
 
@@ -66,9 +66,7 @@ footer {
       margin: 0 0 25px;
     }
   }
-}
 
-.menu-footer-menu-container {
   ul.menu {
     margin: 0;
     padding: 0;
