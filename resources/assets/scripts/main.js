@@ -26,13 +26,13 @@ jQuery(document).ready(() => routes.loadEvents());
 $('.navigation__toggle').on('click', function(e){
   e.preventDefault();
   $('body').addClass('hidden');
-  $('.menu').addClass('show');
+  $('.main-menu').addClass('show');
 });
 
-$('.menu__close, .overlay').on('click', function(e){
+$('.main-menu__close, .overlay').on('click', function(e){
   e.preventDefault();
   $('body').removeClass('hidden');
-  $('.menu').removeClass('show');
+  $('.main-menu').removeClass('show');
 });
 
 $('.first-menu > li.menu-item-has-children > a').on('click', function(e){

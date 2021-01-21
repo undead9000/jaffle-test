@@ -49,11 +49,7 @@ add_action('after_setup_theme', function () {
 
     register_nav_menus([
         'secondary_navigation' => __('Secondary Navigation', 'sage')
-    ]);    
-
-    /*register_nav_menus([
-        'secondary_navigation' => __('Secondary Navigation', 'sage')
-    ]);*/    
+    ]);      
 
     /**
      * Enable post thumbnails
@@ -78,6 +74,8 @@ add_action('after_setup_theme', function () {
      * @see resources/assets/styles/layouts/_tinymce.scss
      */
     add_editor_style(asset_path('styles/main.css'));
+
+    add_theme_support('woocommerce');
 }, 20);
 
 /**

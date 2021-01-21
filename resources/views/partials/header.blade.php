@@ -19,7 +19,7 @@
             <a class="nav-buttons__like" href="#"></a>
             <a class="nav-buttons__profile" href="#"></a>
         </div>
-        <a class="nav-buttons__order" href="#">
+        <a class="nav-buttons__order" href="{{ get_permalink(woocommerce_get_page_id( 'shop' )) }}">
             <span class="nav-buttons__inner">Order</span>
         </a>
     </div>    

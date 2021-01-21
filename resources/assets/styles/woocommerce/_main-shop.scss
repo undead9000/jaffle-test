@@ -1,0 +1,246 @@
+.shop-header {
+  border-top: 1px solid #e7e7e9;
+  box-shadow: 0 4px 54px rgba(0, 0, 0, 0.07);
+  position: relative;
+  z-index: 1;
+
+  &__container {
+    @include container;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 20px;
+  }
+
+  &__location {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  &__title {
+    color: $primary-text-color;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 18px;
+    margin: 0 20px 0 0;
+  }
+
+  &__sort {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__count {
+    margin: 0 20px 0 0;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 14px;
+    color: #43596c;
+  }
+
+  .woocommerce-breadcrumb {
+    margin: 0;
+    font-size: 12px;
+    line-height: 14px;
+    font-weight: bold;
+    color: $primary-text-color;
+
+    a {
+      color: $primary-text-color;
+      font-weight: normal;
+    }
+  }
+
+  &__ordering {
+    margin: 0;
+    float: none;
+
+    select {
+      background: #f9f9fb;
+      border: 1px solid #e7e7e9;
+      border-radius: 5px;
+      padding: 10px 20px;
+    }
+  }
+}
+
+.shop-content {
+  padding: 60px 0;
+  background: #f9f9fb;
+
+  &__container {
+    @include container;
+  }
+
+  &__products {
+    margin: 0 0 50px 0;
+    padding: 0;
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(3, 300px);
+    grid-row-gap: 45px;
+    justify-content: space-between;
+  }
+
+  &__item {
+    position: relative;
+    display: block;
+    background: #fff;
+    box-shadow: 0 5px 45px rgba(0, 0, 0, 0.08);
+    border-radius: 10px;
+    overflow: hidden;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  &__wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    z-index: 2;
+    width: 100%;
+    padding: 25px 25px 0;
+  }
+
+  &__buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__button {
+    border: none;
+    background-color: #fff;
+    border-radius: 40px;
+    width: 30px;
+    height: 30px;
+    background-size: 45%;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    &-like {
+      background-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='13' height='12' viewBox='0 0 13 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10.9322 1.68135C10.3485 1.19273 9.61391 0.953028 8.87232 1.00925C8.13074 1.06547 7.4357 1.41355 6.9235 1.98525L6.50048 2.43844L6.07913 1.98525C5.5668 1.41282 4.87126 1.06427 4.1291 1.00804C3.38693 0.951813 2.65176 1.19197 2.06796 1.68135C1.75229 1.96144 1.49474 2.30787 1.31154 2.69879C1.12833 3.08972 1.02345 3.51667 1.0035 3.95273C0.983554 4.38879 1.04897 4.82451 1.19563 5.23242C1.34228 5.64033 1.567 6.01159 1.85562 6.32279L6.01251 10.784C6.07611 10.8524 6.15189 10.9067 6.23544 10.9438C6.319 10.9809 6.40866 11 6.49923 11C6.5898 11 6.67946 10.9809 6.76302 10.9438C6.84657 10.9067 6.92235 10.8524 6.98595 10.784L11.1428 6.32279C11.4318 6.01184 11.6568 5.64071 11.8038 5.23284C11.9507 4.82497 12.0164 4.38922 11.9966 3.95308C11.9768 3.51694 11.872 3.08989 11.6888 2.69889C11.5055 2.30788 11.2479 1.96141 10.9322 1.68135V1.68135Z' stroke='%23223C52' stroke-width='1.5'/%3E%3C/svg%3E");
+      margin: 0 10px 0 0;
+    }
+
+    &-more {
+      background-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='15' height='10' viewBox='0 0 15 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7.33325 3C6.22991 3 5.33325 3.89666 5.33325 5.00002C5.33325 6.10337 6.22991 7.00003 7.33325 7.00003C8.4366 7.00003 9.33325 6.10337 9.33325 5.00002C9.33325 3.89666 8.43656 3 7.33325 3Z' fill='%23223C52'/%3E%3Cpath d='M7.33334 0C4 0 1.15334 2.07331 0 4.99998C1.15334 7.92663 4 9.99997 7.33334 9.99997C10.67 9.99997 13.5133 7.92663 14.6667 4.99998C13.5133 2.07331 10.67 0 7.33334 0ZM7.33334 8.33329C5.49334 8.33329 4 6.83995 4 4.99995C4 3.15996 5.49334 1.66665 7.33334 1.66665C9.17334 1.66665 10.6667 3.15999 10.6667 4.99998C10.6667 6.83998 9.17334 8.33329 7.33334 8.33329Z' fill='%23223C52'/%3E%3C/svg%3E");
+    }
+  }
+
+  &__onsale {
+    display: block;
+    background: #fff;
+    border-radius: 40px;
+    padding: 6px 19px;
+    font-weight: 800;
+    font-size: 14px;
+    line-height: 17px;
+    text-transform: uppercase;
+    color: #223c52;
+  }
+
+  &__img {
+    filter: drop-shadow(0 5px 45px rgba(0, 0, 0, 0.051));
+    position: relative;
+    max-height: 245px;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      background: rgba(0, 0, 0, 0.2);
+      width: 100%;
+      height: 100%;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+    }
+  }
+
+  &__details {
+    padding: 25px 0 25px 25px;
+    text-decoration: none;
+
+    h3 {
+      margin: 0 0 16px;
+      font-weight: bold;
+      font-size: 16px;
+      line-height: 15px;
+      color: #000;
+    }
+
+    .price {
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: flex-end;
+      align-items: center;
+
+      del {
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 17px;
+        color: #43596c;
+      }
+
+      ins {
+        text-decoration: none;
+        margin: 0 10px 0 0;
+        font-weight: bold;
+        font-size: 17px;
+        line-height: 20px;
+        color: #f00;
+      }
+    }
+  }
+}
+
+.shop-description {
+  padding: 25px 0 25px 55px;
+  background: #fff;
+  border: 1px solid #e7e7e9;
+  border-radius: 10px;
+
+  &__wrapper {
+    width: 100%;
+    max-width: 740px;
+  }
+
+  &__title {
+    position: relative;
+    margin: 0 0 12px;
+    color: $primary-text-color;
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: bold;
+
+    &::before {
+      position: absolute;
+      content: "";
+      background-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='14' height='15' viewBox='0 0 14 15' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7 0.96875C8.20312 0.96875 9.35156 1.29688 10.3906 1.89844C11.4297 2.5 12.25 3.32031 12.8516 4.35938C13.4531 5.39844 13.7812 6.54688 13.7812 7.75C13.7812 8.98047 13.4531 10.1016 12.8516 11.1406C12.25 12.1797 11.4297 13.0273 10.3906 13.6289C9.35156 14.2305 8.20312 14.5312 7 14.5312C5.76953 14.5312 4.64844 14.2305 3.60938 13.6289C2.57031 13.0273 1.72266 12.1797 1.12109 11.1406C0.519531 10.1016 0.21875 8.98047 0.21875 7.75C0.21875 6.54688 0.519531 5.39844 1.12109 4.35938C1.72266 3.32031 2.57031 2.5 3.60938 1.89844C4.64844 1.29688 5.76953 0.96875 7 0.96875ZM7 3.97656C6.67188 3.97656 6.39844 4.11328 6.17969 4.33203C5.96094 4.55078 5.85156 4.82422 5.85156 5.125C5.85156 5.45312 5.96094 5.72656 6.17969 5.94531C6.39844 6.16406 6.67188 6.27344 7 6.27344C7.30078 6.27344 7.57422 6.16406 7.79297 5.94531C8.01172 5.72656 8.14844 5.45312 8.14844 5.125C8.14844 4.82422 8.01172 4.55078 7.79297 4.33203C7.57422 4.11328 7.30078 3.97656 7 3.97656ZM8.53125 10.9219V10.2656C8.53125 10.1836 8.47656 10.1016 8.42188 10.0469C8.36719 9.99219 8.28516 9.9375 8.20312 9.9375H7.875V7.20312C7.875 7.12109 7.82031 7.03906 7.76562 6.98438C7.71094 6.92969 7.62891 6.875 7.54688 6.875H5.79688C5.6875 6.875 5.60547 6.92969 5.55078 6.98438C5.49609 7.03906 5.46875 7.12109 5.46875 7.20312V7.85938C5.46875 7.96875 5.49609 8.05078 5.55078 8.10547C5.60547 8.16016 5.6875 8.1875 5.79688 8.1875H6.125V9.9375H5.79688C5.6875 9.9375 5.60547 9.99219 5.55078 10.0469C5.49609 10.1016 5.46875 10.1836 5.46875 10.2656V10.9219C5.46875 11.0312 5.49609 11.1133 5.55078 11.168C5.60547 11.2227 5.6875 11.25 5.79688 11.25H8.20312C8.28516 11.25 8.36719 11.2227 8.42188 11.168C8.47656 11.1133 8.53125 11.0312 8.53125 10.9219Z' fill='%23FE2626'/%3E%3C/svg%3E");
+      width: 14px;
+      height: 15px;
+      top: 0;
+      left: -30px;
+    }
+  }
+
+  &__content {
+    font-weight: normal;
+    color: #43596c;
+    letter-spacing: 0.46px;
+    font-size: 13px;
+    line-height: 26px;
+  }
+}

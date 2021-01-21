@@ -11,8 +11,6 @@
  * @see https://github.com/webpack-contrib/sass-loader#imports
  */
 // @import "~some-node-module";
-//@import "~hc-offcanvas-nav/src/scss/core";
-//@import "~hc-offcanvas-nav/src/scss/toggle";
 
 /** Import theme styles */
 @import "common/global";
@@ -30,3 +28,4 @@
 @import "layouts/tinymce";
 @import "layouts/main-page";
 @import "layouts/nav-buttons";
+@import "woocommerce/main-shop";

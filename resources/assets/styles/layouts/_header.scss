@@ -84,6 +84,10 @@
 }
 
 .navigation {
+  z-index: 2;
+  position: relative;
+  background: #fff;
+
   &__container {
     @include container;
 
@@ -119,6 +123,7 @@
     display: block;
     width: 18px;
     margin: 0 20px 0 0;
+    cursor: pointer;
 
     div {
       background: $primary-text-color;

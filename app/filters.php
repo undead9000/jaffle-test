@@ -102,3 +102,27 @@ if( function_exists('acf_add_options_page') ) {
         'redirect'      => false        
     ));
 }
+
+add_action('acf/init', function(){
+    // register a portfolio item block
+    acf_register_block(array(
+        'name'              => 'main-page-banner',
+        'title'             => __('Main Page banner'),
+        'description'       => __('A custom block for main page banner.'),
+        'render_template'   => 'views/acf_blocks/main-page-banner.blade.php',
+        'category'          => 'layout',
+        'icon'              => 'excerpt-view',
+        'keywords'          => array( 'main-page' ),
+    ));
+}, 100);
+
+add_filter( 'woocommerce_catalog_orderby', function($options) {
+    $options[ 'menu_order' ] = 'Sorting'; 
+    return $options;
+}, 100);
+
+remove_action( 'woocommerce_before_shop_loop_item_title', 'woocommerce_template_loop_product_thumbnail', 10);
+
+add_action( 'woocommerce_before_shop_loop_item_title', function () {
+    echo '<div class="shop-content__img">' . woocommerce_get_product_thumbnail() . '</div>';  
+}, 10);
