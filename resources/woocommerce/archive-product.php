@@ -17,4 +17,4 @@
 
 defined( 'ABSPATH' ) || exit;
 
-echo App\Template('woo.shop');
+echo App\Template('woocommerce.archive-product');

@@ -24,6 +24,6 @@ if ( empty( $product ) || ! $product->is_visible() ) {
 	return;
 }
 
-echo App\Template('woo.content-product');
+echo App\Template('woocommerce.content-product');
 
 ?>

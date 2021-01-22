@@ -172,6 +172,7 @@
   &__details {
     padding: 25px 0 25px 25px;
     text-decoration: none;
+    min-height: 135px;
 
     h3 {
       margin: 0 0 16px;
@@ -187,22 +188,44 @@
       justify-content: flex-end;
       align-items: center;
 
+      bdi {
+        color: $primary-text-color;
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 19px;
+      }
+
       del {
-        font-weight: 600;
-        font-size: 14px;
-        line-height: 17px;
         color: #43596c;
+
+        bdi {
+          font-weight: 600;
+          font-size: 14px;
+          line-height: 17px;
+          color: #43596c;
+        }
       }
 
       ins {
         text-decoration: none;
-        margin: 0 10px 0 0;
-        font-weight: bold;
-        font-size: 17px;
-        line-height: 20px;
-        color: #f00;
+
+        bdi {
+          margin: 0 10px 0 0;
+          font-weight: bold;
+          font-size: 17px;
+          line-height: 20px;
+          color: #f00;
+        }
       }
     }
+  }
+
+  &__discount {
+    margin: 18px 0 0 0;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 16px;
+    color: #43596c;
   }
 }
 

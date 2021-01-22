@@ -36,7 +36,7 @@
               @php do_action('woocommerce_after_shop_loop'); @endphp
             </ul>
 
-            @include('woo.shop-description')
+            @include('woocommerce.loop.shop-description')
           </div>
         </div>
       @else
