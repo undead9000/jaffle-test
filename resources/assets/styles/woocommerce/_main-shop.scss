@@ -11,6 +11,10 @@
     justify-content: space-between;
     align-items: center;
     padding: 25px 20px;
+
+    @include for-tablet {
+      max-width: 728px;
+    }
   }
 
   &__location {
@@ -25,12 +29,21 @@
     font-size: 18px;
     line-height: 18px;
     margin: 0 20px 0 0;
+
+    @include for-mobile {
+      margin: 0;
+      font-size: 20px;
+    }
   }
 
   &__sort {
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @include for-mobile {
+      display: none;
+    }
   }
 
   &__count {
@@ -52,6 +65,10 @@
       color: $primary-text-color;
       font-weight: normal;
     }
+
+    @include for-mobile {
+      display: none;
+    }
   }
 
   &__ordering {
@@ -63,6 +80,15 @@
       border: 1px solid #e7e7e9;
       border-radius: 5px;
       padding: 10px 20px;
+
+      @include for-tablet {
+        width: 100%;
+        font-size: 14px;
+      }
+    }
+
+    @include for-tablet {
+      max-width: 108px;
     }
   }
 }
@@ -71,18 +97,37 @@
   padding: 60px 0;
   background: #f9f9fb;
 
+  @include for-mobile {
+    padding: 30px 0;
+  }
+
   &__container {
     @include container;
+
+    @include for-tablet {
+      max-width: 728px;
+    }
   }
 
   &__products {
-    margin: 0 0 50px 0;
+    margin: 0 0 50px;
     padding: 0;
     list-style: none;
     display: grid;
-    grid-template-columns: repeat(3, 300px);
+    grid-template-columns: repeat(3, minmax(min-content, 300px));
     grid-row-gap: 45px;
-    justify-content: space-between;
+    grid-column-gap: 30px;
+
+    @include for-tablet {
+      grid-template-columns: repeat(2, minmax(min-content, 317px));
+      grid-column-gap: 35px;
+      justify-content: space-between;
+    }
+
+    @include for-mobile {
+      grid-template-columns: repeat(1, minmax(min-content, 280px));
+      grid-row-gap: 25px;
+    }
   }
 
   &__item {
@@ -167,6 +212,10 @@
       left: 0;
       right: 0;
     }
+
+    @include for-tablet {
+      max-height: 170px;
+    }
   }
 
   &__details {
@@ -230,7 +279,7 @@
 }
 
 .shop-description {
-  padding: 25px 0 25px 55px;
+  padding: 25px 20px 25px 55px;
   background: #fff;
   border: 1px solid #e7e7e9;
   border-radius: 10px;
@@ -256,6 +305,14 @@
       height: 15px;
       top: 0;
       left: -30px;
+
+      @include for-mobile {
+        left: 0;
+      }
+    }
+
+    @include for-mobile {
+      padding: 0 0 0 30px;
     }
   }
 
@@ -265,5 +322,9 @@
     letter-spacing: 0.46px;
     font-size: 13px;
     line-height: 26px;
+  }
+
+  @include for-mobile {
+    padding: 25px;
   }
 }
