@@ -90,9 +90,6 @@ add_filter('comments_template', function ($comments_template) {
     return $comments_template;
 }, 100);
 
-remove_filter( 'the_content', 'wpautop' );
-remove_filter( 'the_excerpt', 'wpautop' );
-
 if( function_exists('acf_add_options_page') ) {
     acf_add_options_sub_page(array(
         'page_title'    => 'Footer options',
@@ -124,5 +121,12 @@ add_filter( 'woocommerce_catalog_orderby', function($options) {
 remove_action( 'woocommerce_before_shop_loop_item_title', 'woocommerce_template_loop_product_thumbnail', 10);
 
 add_action( 'woocommerce_before_shop_loop_item_title', function () {
-    echo '<div class="shop-content__img">' . woocommerce_get_product_thumbnail() . '</div>';  
+    $product_img_template = '<div class="shop-content__img">' . woocommerce_get_product_thumbnail();
+    if(get_field('member_price')) {
+        $member_price = '<div class="member-price"><div class="member-price__name">Member Price</div><div class="member-price__value">$' . get_field('member_price') . '</div></div>';
+        $product_img_template = $product_img_template . $member_price;
+    }
+    $product_img_template = $product_img_template . '</div>';
+    echo $product_img_template;
+    //echo '<div class="shop-content__img">' . woocommerce_get_product_thumbnail() . '<div class="shop-content__member">' . get_field('member_price') . '</div></div>';  
 }, 10);

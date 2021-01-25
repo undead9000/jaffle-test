@@ -90,6 +90,10 @@
     @include for-tablet {
       max-width: 108px;
     }
+
+    &.woocommerce-ordering {
+      margin: 0;
+    }
   }
 }
 
@@ -110,9 +114,7 @@
   }
 
   &__products {
-    margin: 0 0 50px;
-    padding: 0;
-    list-style: none;
+    margin: 0 0 50px !important;
     display: grid;
     grid-template-columns: repeat(3, minmax(min-content, 300px));
     grid-row-gap: 45px;
@@ -127,6 +129,11 @@
     @include for-mobile {
       grid-template-columns: repeat(1, minmax(min-content, 280px));
       grid-row-gap: 25px;
+    }
+
+    &::before,
+    &::after {
+      display: none !important;
     }
   }
 
@@ -326,5 +333,27 @@
 
   @include for-mobile {
     padding: 25px;
+  }
+}
+
+.member-price {
+  position: absolute;
+  bottom: 25px;
+  left: 25px;
+  color: #fff;
+  z-index: 1;
+
+  &__name {
+    font-weight: 800;
+    font-size: 13px;
+    line-height: 16px;
+    text-transform: uppercase;
+    margin: 0 0 4px;
+  }
+
+  &__value {
+    font-weight: bold;
+    font-size: 17px;
+    line-height: 20px;
   }
 }

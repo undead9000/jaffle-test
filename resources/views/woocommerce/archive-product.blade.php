@@ -2,7 +2,9 @@
 @extends('layouts.app')
 @section('content')
 
-    
+  <div id="primary" class="content-area">
+    <main id="main" class="site-main" role="main"> 
+
       @if(woocommerce_product_loop())
         <div class="shop-header">
           <div class="shop-header__container">
@@ -21,7 +23,7 @@
 
         <div class="shop-content">
           <div class="shop-content__container">
-            <ul class="shop-content__products">
+            <ul class="shop-content__products products">
 
               @if(wc_get_loop_prop('total'))
                 @while(have_posts())
@@ -45,6 +47,8 @@
           do_action('woocommerce_no_products_found');
         @endphp
       @endif
- 
+
+    </main>
+  </div>  
 
 @endsection
